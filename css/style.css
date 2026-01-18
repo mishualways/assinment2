@@ -23,6 +23,8 @@ body {
   --nav-border-color: #412567;
   --nav-hover-color: #fb09b4;
   --about-bg--color: #230e3d;
+  --featured-bg--color: #1a0b2e;
+  --featured-card-bg--color: #250d44;
 }
 .container {
   max-width: 80rem;
@@ -198,6 +200,7 @@ body {
 }
 .about-card .card {
   align-items: center;
+  text-align: center;
   gap: 1rem;
 }
 .card-title {
@@ -209,6 +212,50 @@ body {
   text-transform: uppercase;
 }
 /* about style end */
+
+/* featured style start */
+.featured {
+  background-color: var(--featured-bg--color);
+  padding: 7.5rem 0rem;
+}
+.podcast-card-container {
+  margin-top: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.5rem;
+}
+.podcast-card {
+  width: 24rem;
+  background-color: var(--featured-card-bg--color);
+  align-items: center;
+  gap: 1.5rem;
+  border-radius: 1.5rem;
+}
+.podcast-card .podcast-video {
+  width: 24rem;
+  height: 14rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+.podcast-content {
+  padding: 0 1.5rem;
+}
+.podcast-content-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white--color);
+  margin-bottom: 0.8rem;
+}
+.podcast-content-description {
+  color: rgba(255, 255, 255, 0.781);
+  margin-bottom: 1.5rem;
+}
+.podcast-duration {
+  align-items: center;
+  justify-content: start;
+  gap: 6px;
+  color: var(--green-color);
+  margin-bottom: 1.5rem;
+}
+/* featured style end */
 
 /* main style end */
 
@@ -275,6 +322,18 @@ body {
     padding: 2rem 0 2rem 0;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 2rem;
+  }
+
+  /* podcast */
+  .podcast-card-container {
+    margin-top: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+    justify-content: center;
+  }
+  .podcast-card-container .item3 {
+    grid-column: span 2;
+    margin: auto;
   }
 }
 /* Medium Device responsive style end*/
@@ -344,6 +403,25 @@ body {
   }
   .card-title {
     font-size: 2rem;
+  }
+
+  /* podcast */
+  .podcast-card-container {
+    margin-top: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 1rem;
+    justify-items: center;
+  }
+
+  .podcast-card {
+    width: 23rem;
+  }
+  .podcast-card .podcast-video {
+    width: 23rem;
+  }
+
+  .podcast-content-title{
+    font-size: 1.25rem;
   }
 }
 /* Small device responsive style end */
