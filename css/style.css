@@ -14,24 +14,29 @@ body {
 /* common style start */
 :root {
   --text-color: #ffffff;
+  --section-title--color: #ffffff;
+  --white--color: #ffffff;
+  --hero-badge-color: #00ff88;
+  --hero-btn-color: #00ff88;
+  --green-color: #00ff88;
   --nav-bg-color: #1a0b2e;
   --nav-border-color: #412567;
   --nav-hover-color: #fb09b4;
-  --hero-badge-color: #00ff88;
-  --hero-btn-color: #00ff88;
-  --section-title--color: #ffffff;
   --about-bg--color: #230e3d;
 }
 .container {
   max-width: 80rem;
   margin: auto;
-  padding: 2rem;
+  padding: 0rem 2rem;
 }
 .flex {
   display: flex;
 }
 .flex-col {
   flex-direction: column;
+}
+.grid {
+  display: grid;
 }
 
 .btn {
@@ -167,6 +172,9 @@ body {
   padding-top: 3rem;
   background-color: var(--about-bg--color);
 }
+.about-content {
+  border-bottom: 1px solid #d1ced562;
+}
 .about-description {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -175,10 +183,30 @@ body {
   max-width: 699px;
   margin: 1rem auto 2rem auto;
 }
+
 .about-content p {
   text-align: center;
   color: var(--text-color);
   line-height: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+.about-card {
+  padding: 5rem 0 7.5rem 0;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 5rem;
+}
+.about-card .card {
+  align-items: center;
+  gap: 1rem;
+}
+.card-title {
+  color: var(--green-color);
+  font-size: 3rem;
+}
+.card-tagline {
+  color: #d1ced5;
+  text-transform: uppercase;
 }
 /* about style end */
 
@@ -235,6 +263,19 @@ body {
   .hero-btn-box {
     margin-bottom: 2.5rem;
   }
+
+  /* aboute style */
+  .about {
+    padding-top: 2rem;
+  }
+  .about-content p {
+    margin-bottom: 2rem;
+  }
+  .about-card {
+    padding: 2rem 0 2rem 0;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+  }
 }
 /* Medium Device responsive style end*/
 
@@ -287,6 +328,22 @@ body {
 
   .hero-btn-box {
     margin-bottom: 2.5rem;
+  }
+
+  /* aboute style */
+  .about {
+    padding-top: 2rem;
+  }
+  .about-content p {
+    margin-bottom: 1rem;
+  }
+  .about-card {
+    padding: 2rem 0 2rem 0;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+  }
+  .card-title {
+    font-size: 2rem;
   }
 }
 /* Small device responsive style end */
