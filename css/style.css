@@ -316,6 +316,51 @@ body {
 }
 /* host style end */
 
+/* footer style start */
+.footer {
+  background-image: url(../assets/footer-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.footer-container {
+  padding: 7.5rem;
+  gap: 2rem;
+}
+.footer-container .footer-logo {
+  width: 100%;
+  max-width: 25rem;
+  margin: auto;
+}
+.footer-sponsor-container {
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2.5rem;
+  max-width: 50rem;
+  margin: auto;
+  align-items: center;
+}
+.footer-sponsor-box .sponsor-name {
+  color: rgba(255, 255, 255, 0.781);
+  font-weight: 500;
+}
+.footer-sponsor-box {
+  justify-items: center;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  /* border: 1px solid red; */
+}
+.footer-sponsor-box .item2 {
+  padding-right: 20px;
+}
+.copyright {
+  color: rgba(255, 255, 255, 0.781);
+  line-height: 1.5rem;
+  margin: auto;
+  text-align: center;
+}
+/* footer style end */
+
 /* main style end */
 
 /* Medium Device responsive style start*/
@@ -384,6 +429,9 @@ body {
   }
 
   /* featured style */
+  .host {
+    padding: 0rem 2.5rem 3rem;
+  }
   .featured {
     padding: 3.5rem 0rem;
   }
@@ -408,6 +456,20 @@ body {
 
   .host-description {
     text-align: center;
+  }
+
+  /* footer style */
+  .footer-container {
+    padding: 2.5rem;
+    gap: 2rem;
+  }
+  .footer-sponsor-container {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1.5rem;
+  }
+
+  .footer-container .footer-logo {
+    max-width: 18rem;
   }
 }
 /* Medium Device responsive style end*/
@@ -500,6 +562,9 @@ body {
   }
 
   /* host style */
+  .host {
+    padding: 0rem 2.5rem 2.5rem;
+  }
   .host-container {
     flex-direction: column;
     border-radius: 1.5rem;
@@ -518,6 +583,20 @@ body {
 
   .host-name {
     font-size: 1.5rem;
+  }
+
+  /* footer style */
+  .footer-container {
+    padding: 2.5rem;
+    gap: 2rem;
+  }
+  .footer-container .footer-logo {
+    max-width: 14rem;
+  }
+  .footer-sponsor-container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0.3rem;
+    row-gap: 1rem;
   }
 }
 /* Small device responsive style end */
