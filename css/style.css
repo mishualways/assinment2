@@ -7,12 +7,15 @@
   box-sizing: border-box;
   /* border: 1px solid red; */
 }
+
 body {
   font-family: "Inter", sans-serif;
 }
+
 .hidden {
   display: none;
 }
+
 /* common style start */
 :root {
   --text-color: #ffffff;
@@ -31,17 +34,21 @@ body {
   --host-bg--color: #1a0b2e;
   --featured-card-bg--color: #250d44;
 }
+
 .container {
   max-width: 80rem;
   margin: auto;
   padding: 0rem 2rem;
 }
+
 .flex {
   display: flex;
 }
+
 .flex-col {
   flex-direction: column;
 }
+
 .grid {
   display: grid;
 }
@@ -53,12 +60,10 @@ body {
   text-decoration: none;
   color: var(--text-color);
   font-weight: 600;
-  background: linear-gradient(
-    to right top,
-    #f7e93f 0%,
-    #fb09b4 51%,
-    #9100f8 100%
-  );
+  background: linear-gradient(to right top,
+      #f7e93f 0%,
+      #fb09b4 51%,
+      #9100f8 100%);
   transition: 0.3s;
 }
 
@@ -83,6 +88,7 @@ body {
   background-color: var(--nav-bg-color);
   border-bottom: 1px solid var(--nav-border-color);
 }
+
 .navbar {
   color: white;
   justify-content: space-between;
@@ -94,11 +100,13 @@ body {
   width: 100%;
   max-width: 14rem;
 }
+
 .navbar .nav-list {
   display: flex;
   list-style: none;
   gap: 2rem;
 }
+
 .navbar .nav-list a {
   text-decoration: none;
   color: var(--text-color);
@@ -106,6 +114,7 @@ body {
   line-height: 120%;
   transition: 0.3s;
 }
+
 .navbar .nav-list a:hover {
   color: var(--nav-hover-color);
 }
@@ -114,15 +123,19 @@ body {
   display: none;
   transition: 0.3s;
 }
+
 .navbar .toggle:hover {
   cursor: pointer;
 }
+
+
 .hero {
   background: url(../assets/hero-bg.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .hero-content {
   align-items: center;
 }
@@ -138,10 +151,12 @@ body {
   display: block;
   outline: none;
 }
+
 .hero-image {
   position: relative;
   margin-bottom: 0.8rem;
 }
+
 .hero-content .badge {
   background-color: var(--hero-badge-color);
   padding: 6px 16px;
@@ -160,6 +175,7 @@ body {
   color: var(--text-color);
   margin-bottom: 0.5rem;
 }
+
 .hero-content .tag-line {
   color: var(--text-color);
   margin-bottom: 1.5rem;
@@ -178,6 +194,23 @@ body {
   border: 2px solid var(--hero-btn-color);
   color: var(--hero-btn-color);
 }
+
+/* add animation hero section */
+@keyframes hero-animation {
+  from {
+    transform: translateY(30px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.hero-animation {
+  transform: translateY(30px);
+  animation: hero-animation 1.5s ease-in-out 0.2s forwards;
+}
+
 /* header style end*/
 
 /* about style start */
@@ -185,9 +218,11 @@ body {
   padding-top: 3rem;
   background-color: var(--about-bg--color);
 }
+
 .about-content {
   border-bottom: 1px solid #d1ced562;
 }
+
 .about-description {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -209,23 +244,28 @@ body {
   grid-template-columns: repeat(4, 1fr);
   column-gap: 5rem;
 }
+
 .about-card .card {
   align-items: center;
   text-align: center;
   gap: 1rem;
 }
+
 .about-card .star {
   font-size: 2.5rem;
 }
+
 .about-card .card-title {
   color: var(--green-color);
   font-size: 3rem;
   font-weight: 900;
 }
+
 .card-tagline {
   color: #d1ced5;
   text-transform: uppercase;
 }
+
 /* about style end */
 
 /* choose */
@@ -233,6 +273,7 @@ body {
   /* padding: 7.5rem 12.5rem; */
   background-color: var(--choose-bg--color);
 }
+
 .choose-card-container {
   grid-template-columns: repeat(3, 1fr);
   column-gap: 3rem;
@@ -241,12 +282,15 @@ body {
 .choose-card-container .item1 {
   grid-row: span 2;
 }
+
 .choose-card-container .item2 {
   grid-column: span 2;
 }
+
 .choose-card-container .item3 {
   grid-column: span 2;
 }
+
 .choose-card-container .item4 {
   grid-column: span 2;
 }
@@ -267,10 +311,12 @@ body {
   font-weight: 700;
   color: var(--white--color);
 }
+
 .choose-card-description {
   line-height: 1.5rem;
   color: white;
 }
+
 /* choose style end */
 
 /* featured style start */
@@ -278,6 +324,7 @@ body {
   background-color: var(--featured-bg--color);
   padding: 7.5rem 0rem;
 }
+
 .podcast-card-container {
   margin-top: 1rem;
   gap: 1.5rem;
@@ -285,6 +332,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .podcast-card {
   width: 24rem;
   background-color: var(--featured-card-bg--color);
@@ -292,24 +340,29 @@ body {
   gap: 1.5rem;
   border-radius: 1.5rem;
 }
+
 .podcast-card .podcast-video {
   width: 24rem;
   height: 14rem;
   border-radius: 1.5rem 1.5rem 0 0;
 }
+
 .podcast-content {
   padding: 0 1.5rem;
 }
+
 .podcast-content-title {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--white--color);
   margin-bottom: 0.8rem;
 }
+
 .podcast-content-description {
   color: rgba(255, 255, 255, 0.781);
   margin-bottom: 1.5rem;
 }
+
 .podcast-duration {
   align-items: center;
   justify-content: start;
@@ -317,6 +370,7 @@ body {
   color: var(--green-color);
   margin-bottom: 1.5rem;
 }
+
 /* featured style end */
 
 /* host style start */
@@ -324,6 +378,7 @@ body {
   background-color: var(--host-bg--color);
   padding: 0rem 2.5rem 7.5rem;
 }
+
 .host-container {
   background-color: rgba(53, 17, 101, 0.4);
   margin-top: 2.5rem;
@@ -334,35 +389,42 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .host-img {
   width: 100%;
   max-width: 13rem;
 }
+
 .host-name {
   font-size: 2rem;
   font-weight: 700;
   color: var(--white--color);
   margin-bottom: 1rem;
 }
+
 .host-description {
   color: rgba(255, 255, 255, 0.781);
   margin-bottom: 1rem;
   line-height: 1.5rem;
   max-width: 56rem;
 }
+
 .host-social-icon {
   justify-content: start;
   align-items: center;
   gap: 8px;
 }
+
 .host-social-icon img {
   width: 1rem;
 }
+
 .host-social-icon .icon {
   border: 1px solid #533c72;
   padding: 7px 9px 7px 9px;
   border-radius: 100%;
 }
+
 /* host style end */
 
 /* footer style start */
@@ -372,15 +434,18 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .footer-container {
   padding: 7.5rem;
   gap: 2rem;
 }
+
 .footer-container .footer-logo {
   width: 100%;
   max-width: 25rem;
   margin: auto;
 }
+
 .footer-sponsor-container {
   grid-template-columns: repeat(4, 1fr);
   column-gap: 2.5rem;
@@ -388,10 +453,12 @@ body {
   margin: auto;
   align-items: center;
 }
+
 .footer-sponsor-box .sponsor-name {
   color: rgba(255, 255, 255, 0.781);
   font-weight: 500;
 }
+
 .footer-sponsor-box {
   justify-items: center;
   align-items: center;
@@ -399,21 +466,25 @@ body {
   width: fit-content;
   /* border: 1px solid red; */
 }
+
 .footer-sponsor-box .item2 {
   padding-right: 20px;
 }
+
 .copyright {
   color: rgba(255, 255, 255, 0.781);
   line-height: 1.5rem;
   margin: auto;
   text-align: center;
 }
+
 /* footer style end */
 
 /* main style end */
 
 /* Medium Device responsive style start*/
 @media screen and (min-width: 576px) and (max-width: 992px) {
+
   /* common style */
   .section-title {
     font-size: 2.5rem;
@@ -427,9 +498,11 @@ body {
   .navbar .nav-list {
     display: none;
   }
+
   .navbar .nav-btn {
     display: none;
   }
+
   .navbar .toggle {
     display: block;
   }
@@ -437,13 +510,16 @@ body {
   .hero {
     background-position: center;
   }
+
   .hero-image {
     margin-bottom: 0rem;
   }
+
   .hero-image img {
     margin-top: 0rem;
     padding: 4rem;
   }
+
   .hero-content .badge {
     top: 2.75rem;
     left: 10.87rem;
@@ -468,9 +544,11 @@ body {
   .about {
     padding-top: 2rem;
   }
+
   .about-content p {
     margin-bottom: 2rem;
   }
+
   .about-card {
     padding: 2rem 0 2rem 0;
     grid-template-columns: repeat(2, 1fr);
@@ -486,9 +564,11 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  .choose-card-container .item5{
+
+  .choose-card-container .item5 {
     grid-column: span 2;
   }
+
   .choose-card-container .item1,
   .choose-card-container .item2,
   .choose-card-container .item3,
@@ -500,16 +580,20 @@ body {
   .choose-card-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
   /* featured style */
   .host {
     padding: 0rem 2.5rem 3rem;
   }
+
   .featured {
     padding: 3.5rem 0rem;
   }
+
   .podcast-card-container {
     margin-top: 1rem;
   }
+
   .podcast-card-container .item3 {
     grid-column: span 2;
     margin: auto;
@@ -519,6 +603,7 @@ body {
   .host-container {
     flex-direction: column;
   }
+
   .host-content {
     display: flex;
     flex-direction: column;
@@ -535,6 +620,7 @@ body {
     padding: 2.5rem;
     gap: 2rem;
   }
+
   .footer-sponsor-container {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 1.5rem;
@@ -544,10 +630,12 @@ body {
     max-width: 18rem;
   }
 }
+
 /* Medium Device responsive style end*/
 
 /* Small device responsive style start */
 @media screen and (max-width: 576px) {
+
   /* common style */
   .section-title {
     font-size: 2rem;
@@ -557,12 +645,15 @@ body {
   .navbar .logo {
     max-width: 8rem;
   }
+
   .navbar .nav-list {
     display: none;
   }
+
   .navbar .nav-btn {
     display: none;
   }
+
   .navbar .toggle {
     display: block;
   }
@@ -570,13 +661,16 @@ body {
   .hero {
     background-position: center;
   }
+
   .hero-image {
     margin-bottom: 0rem;
   }
+
   .hero-image img {
     margin-top: 0rem;
     padding: 4rem;
   }
+
   .hero-content .badge {
     top: 2.75rem;
     left: 10.87rem;
@@ -597,24 +691,34 @@ body {
     margin-bottom: 2.5rem;
   }
 
+  .hero-btn-box .btn {
+    padding: 12px 10px;
+    font-size: 14px;
+  }
+
   /* featured style */
   .featured {
     padding: 3.5rem 0rem;
   }
+
   .about {
     padding-top: 2rem;
   }
+
   .about-content p {
     margin-bottom: 1rem;
   }
+
   .about-card {
     padding: 2rem 0 2rem 0;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 2rem;
   }
+
   .about-card .card-title {
     font-size: 2rem;
   }
+
   /* choose style */
   .choose {
     padding: 2.5rem 0rem;
@@ -624,6 +728,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
   }
+
   .choose-card-container .item1,
   .choose-card-container .item2,
   .choose-card-container .item3,
@@ -636,6 +741,7 @@ body {
   .choose-card-title {
     font-size: 1.3rem;
   }
+
   /* podcast */
   .podcast-card-container {
     margin-top: 1rem;
@@ -645,6 +751,7 @@ body {
   .podcast-card {
     width: 19rem;
   }
+
   .podcast-card .podcast-video {
     width: 19rem;
   }
@@ -657,6 +764,7 @@ body {
   .host {
     padding: 0rem 2.5rem 2.5rem;
   }
+
   .host-container {
     flex-direction: column;
     border-radius: 1.5rem;
@@ -684,13 +792,16 @@ body {
     padding: 2.5rem;
     gap: 2rem;
   }
+
   .footer-container .footer-logo {
     max-width: 14rem;
   }
+
   .footer-sponsor-container {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 0.3rem;
     row-gap: 1rem;
   }
 }
+
 /* Small device responsive style end */
